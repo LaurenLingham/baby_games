@@ -1,10 +1,11 @@
 import './App.css'
+import GuessTheAnimal from './GuessTheAnimal/GuessTheAnimal'
 
 function App() {
 
   return (
     <>
-      <span>Test</span>
+      <GuessTheAnimal/>
     </>
   )
 }
