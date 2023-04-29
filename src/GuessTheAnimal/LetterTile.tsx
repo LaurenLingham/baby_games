@@ -1,6 +1,6 @@
 // import styles from Letter.css
 
-const Letter = ({letter}) => {
+const LetterTile = ({letter}: {letter: string}) => {
 
     // const onClick = (e) => {
     //   handleClick(e);
@@ -12,5 +12,4 @@ const Letter = ({letter}) => {
     </span>)
   }
   
-  export default Letter;
-  
+  export default LetterTile;

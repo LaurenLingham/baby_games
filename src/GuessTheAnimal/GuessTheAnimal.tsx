@@ -1,12 +1,12 @@
 //import Letter from "./Letter.jsx";
 
 import { useEffect, useState } from "react";
-import Letter from "./Letter";
+import LetterTile from "./LetterTile";
 import words from "./WordList.json";
 
 const GuessTheAnimal = () => {
   
-  const [wordToGuess, setWordToGuess] = useState("testt");
+  const [wordToGuess, setWordToGuess] = useState("");
   const [letters, setLetters] = useState<JSX.Element[]>([]);
   const [currentGuess, setCurrentGuess] = useState("");
 
@@ -19,11 +19,15 @@ const GuessTheAnimal = () => {
   }
   
   const init = () => {
-    setWordToGuess(getNewWord());
+    let newWordToGuess = getNewWord();
+
+    setWordToGuess(newWordToGuess);
     
+    console.log(newWordToGuess);
+
     let newLetters: JSX.Element[] = [];
-    for (let character of wordToGuess) {
-      newLetters.push(<Letter letter={character} />);
+    for (let character of newWordToGuess) {
+      newLetters.push(<LetterTile letter={character} />);
     }
 
     setLetters(newLetters);
