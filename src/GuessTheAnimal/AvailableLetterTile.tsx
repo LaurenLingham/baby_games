@@ -1,15 +1,16 @@
-// import styles from Letter.css
+import Letter from "./Letter";
 
-const LetterTile = ({letter}: {letter: string}) => {
+const AvailableLetterTile = ({ letter, letterSelected }: { letter: string, letterSelected: (letter: string) => void }) => {
 
-    // const onClick = (e) => {
-    //   handleClick(e);
-    // }
-  
-    return (
-    <span className="letter">
-      {letter}
-    </span>)
+  const handleClick = () => {
+    letterSelected(letter);
   };
-  
-  export default LetterTile;
+
+  return (
+    <div onClick={handleClick}>
+      <Letter letter={letter}/>
+    </div>
+  )
+};
+
+export default AvailableLetterTile;

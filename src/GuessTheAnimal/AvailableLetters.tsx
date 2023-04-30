@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import AvailableLetterTile from "./AvailableLetterTile";
 
-const AvailableLetters = ({ wordToGuess }: { wordToGuess: string }) => {
+const AvailableLetters = ({ wordToGuess, letterSelected }: { wordToGuess: string, letterSelected: (letter: string) => void }) => {
 
     const [availableLetters, setAvailableLetters] = useState<JSX.Element[]>([]);
 
     const createAvailableLetters = () => {
         let newLetters: JSX.Element[] = [];
         for (let character of wordToGuess) {
-            newLetters.push(<AvailableLetterTile letter={character} />);
+            newLetters.push(<AvailableLetterTile letter={character} letterSelected={letterSelected} />);
         }
 
         setAvailableLetters(newLetters);

@@ -1,11 +1,8 @@
-//import Letter from "./Letter.jsx";
-
 import { useEffect, useState } from "react";
 import words from "./WordList.json";
 import AvailableLetters from "./AvailableLetters";
 
 const GuessTheAnimal = () => {
-  
   const [wordToGuess, setWordToGuess] = useState("");
   const [currentGuess, setCurrentGuess] = useState("");
 
@@ -23,18 +20,20 @@ const GuessTheAnimal = () => {
   };
 
   const letterSelected = (letter: string) => {
-    setCurrentGuess(currentGuess.concat(letter));
-
-    // re-render guessed letters
-  };
-
-  const handleLetterClick = (e) => {
+    let newGuess = currentGuess;
+    newGuess = newGuess.concat(letter);
     
+    console.log(newGuess);
+    setCurrentGuess(newGuess);
+    
+    console.log(currentGuess);
+    console.log(letter);
   };
   
   return (
     <div>
-      <AvailableLetters wordToGuess={wordToGuess}/>
+      <AvailableLetters wordToGuess={wordToGuess} letterSelected = {letterSelected}/>
+      {currentGuess}
     </div>
   );
 };
