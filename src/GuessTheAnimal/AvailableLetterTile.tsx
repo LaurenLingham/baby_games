@@ -10,6 +10,6 @@ const LetterTile = ({letter}: {letter: string}) => {
     <span className="letter">
       {letter}
     </span>)
-  }
+  };
   
   export default LetterTile;
