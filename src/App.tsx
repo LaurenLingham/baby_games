@@ -1,5 +1,5 @@
 import './App.css'
-import GuessTheAnimal from './GuessTheAnimal/GuessTheAnimal'
+import GuessTheAnimal from './GuessTheAnimal/Containers/GuessTheAnimal'
 
 function App() {
 
