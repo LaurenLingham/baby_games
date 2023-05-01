@@ -1,0 +1,12 @@
+.guess-the-animal-game {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.image-and-guess {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

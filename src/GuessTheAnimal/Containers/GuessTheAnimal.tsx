@@ -1,16 +1,13 @@
 import { useEffect, useState } from "react";
+import "./GuessTheAnimal.css";
 import words from "../WordList.json";
 import AvailableLetters from "../Components/AvailableLetters";
-import CurrentWordGuess from "../Components/CurrentGuess";
-import WordToGuessImage from "../WordToGuessImage";
+import CurrentWordGuess from "../Components/CurrentWordGuess";
+import WordToGuessImage from "../Components/WordToGuessImage";
 
 const GuessTheAnimal = () => {
   const [wordToGuess, setWordToGuess] = useState("");
-  const [currentGuess, setCurrentGuess] = useState("");
-
-  useEffect(() => {
-    init();
-  }, [])
+  const [currentGuess, setCurrentGuess] = useState<string[]>([]);
 
   const getNewWord = () => {
     return words[Math.floor(Math.random() * words.length)];
@@ -21,24 +18,27 @@ const GuessTheAnimal = () => {
     setWordToGuess(newWordToGuess);
   };
 
-  const letterSelected = (letter: string) => {
-    let newGuess = currentGuess;
-    newGuess = newGuess.concat(letter);
+  useEffect(() => {
+    init();
+  }, [])
 
-    console.log(newGuess);
+  const letterSelected = (letter: string) => {
+    let newGuess = currentGuess.concat(letter);
     setCurrentGuess(newGuess);
 
+    
     console.log(currentGuess);
+    console.log(newGuess);
     console.log(letter);
   };
 
   return (
-    <div>
+    <div className="guess-the-animal-game">
       <AvailableLetters wordToGuess={wordToGuess} letterSelected={letterSelected} />
-      {currentGuess}
       <div className="image-and-guess">
-        <WordToGuessImage />
-        <CurrentWordGuess />
+        <WordToGuessImage wordToGuess={wordToGuess} />
+        {currentGuess}
+        <CurrentWordGuess wordToGuess={wordToGuess} letterSelected={letterSelected} />
       </div>
     </div>
   );
