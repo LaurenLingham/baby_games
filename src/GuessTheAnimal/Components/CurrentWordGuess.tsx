@@ -1,6 +1,6 @@
 import GuessedLetterTile from "./GuessedLetterTile";
 
-const CurrentWordGuess = ({ wordToGuess, letterSelected }: { wordToGuess: string, letterSelected: (letter: string) => void }) => {
+const CurrentWordGuess = ({ wordToGuess }: { wordToGuess: string }) => {
 
   // const guessedLetters = [];
   // const correctGuess = guessedLetters.includes(l)

@@ -11,6 +11,16 @@ const AvailableLetters = ({ wordToGuess, letterSelected }: { wordToGuess: string
             newLetters.push(<AvailableLetterTile letter={character} letterSelected={letterSelected} />);
         }
 
+        // const getAdditionalLetters = (): string => {
+        //     const alphabet = "abcdefghijklmnopqrstuvwxyz";
+        //     let result = "";
+        //     for (let i = 0; i < (8 - wordToGuess.length); i++) {
+        //         result += alphabet[Math.floor(Math.random() * alphabet.length)];
+        //     }
+        //     return result;
+        // };
+        // create a for loop to add letters to newLetters
+
         setAvailableLetters(newLetters);
     };
 

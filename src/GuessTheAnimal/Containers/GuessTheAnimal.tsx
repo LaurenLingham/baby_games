@@ -7,12 +7,16 @@ import WordToGuessImage from "../Components/WordToGuessImage";
 
 const GuessTheAnimal = () => {
   const [wordToGuess, setWordToGuess] = useState("");
-  const [currentGuess, setCurrentGuess] = useState<string[]>([]);
+  const [currentGuess, setCurrentGuess] = useState("");
 
   const getNewWord = () => {
     return words[Math.floor(Math.random() * words.length)];
   };
 
+  const hasGuessedCorrectly = () => {
+    return currentGuess == wordToGuess;
+  }
+  
   const init = () => {
     let newWordToGuess = getNewWord();
     setWordToGuess(newWordToGuess);
@@ -23,13 +27,12 @@ const GuessTheAnimal = () => {
   }, [])
 
   const letterSelected = (letter: string) => {
-    let newGuess = currentGuess.concat(letter);
+    let newGuess = currentGuess + letter;
     setCurrentGuess(newGuess);
 
-    
-    console.log(currentGuess);
-    console.log(newGuess);
-    console.log(letter);
+    console.log({currentGuess});
+    console.log({newGuess});
+    console.log({letter});
   };
 
   return (
@@ -38,7 +41,7 @@ const GuessTheAnimal = () => {
       <div className="image-and-guess">
         <WordToGuessImage wordToGuess={wordToGuess} />
         {currentGuess}
-        <CurrentWordGuess wordToGuess={wordToGuess} letterSelected={letterSelected} />
+        <CurrentWordGuess wordToGuess={wordToGuess} />
       </div>
     </div>
   );
