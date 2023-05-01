@@ -41,7 +41,7 @@ const GuessTheAnimal = () => {
       <div className="image-and-guess">
         <WordToGuessImage wordToGuess={wordToGuess} />
         {currentGuess}
-        <CurrentWordGuess wordToGuess={wordToGuess} />
+        <CurrentWordGuess wordToGuess={wordToGuess} currentGuess={currentGuess}/>
       </div>
     </div>
   );
