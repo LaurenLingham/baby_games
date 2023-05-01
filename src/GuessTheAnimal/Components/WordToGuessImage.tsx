@@ -2,9 +2,10 @@ const WordToGuessImage = ({ wordToGuess }: { wordToGuess: string }) => {
 
     return (
         <div>
+            {wordToGuess}
             <div>
-            <img src={"/src/GuessTheAnimal/Images/" + wordToGuess} alt=""
-                height="500" width="750" style={{ objectFit: "contain" }} />
+                <img src={"/src/GuessTheAnimal/Images/" + wordToGuess} alt=""
+                    height="500" width="750" style={{ objectFit: "contain" }} />
             </div>
         </div>
     )

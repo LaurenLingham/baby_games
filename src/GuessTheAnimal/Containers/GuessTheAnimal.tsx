@@ -27,7 +27,7 @@ const GuessTheAnimal = () => {
   }, [])
 
   const letterSelected = (letter: string) => {
-    let newGuess = currentGuess + letter;
+    let newGuess = currentGuess.concat(letter);
     setCurrentGuess(newGuess);
 
     console.log({currentGuess});
