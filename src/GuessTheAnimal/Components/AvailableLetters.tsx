@@ -27,9 +27,9 @@ const AvailableLetters = ({ wordToGuess, letterSelected }: { wordToGuess: string
     const scrambledLetters = scramble(letters);
 
     return (
-        <>
+        <div className="letters-container">
             {...scrambledLetters}
-        </>
+        </div>
     )
 };
 

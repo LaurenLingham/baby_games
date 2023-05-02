@@ -37,7 +37,9 @@ const GuessTheAnimal = () => {
 
   return (
     <div className="guess-the-animal-game">
-      <AvailableLetters wordToGuess={wordToGuess} letterSelected={letterSelected} />
+      <div className="available-letters">
+        <AvailableLetters wordToGuess={wordToGuess} letterSelected={letterSelected} />
+      </div>
       <div className="image-and-guess">
         <WordToGuessImage wordToGuess={wordToGuess} />
         {currentGuess}

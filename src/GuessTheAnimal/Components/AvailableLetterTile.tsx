@@ -7,7 +7,7 @@ const AvailableLetterTile = ({ letter, letterSelected }: { letter: string, lette
   };
 
   return (
-    <div onClick={handleClick}>
+    <div className="available-letter-tile" onClick={handleClick}>
       <Letter letter={letter}/>
     </div>
   )

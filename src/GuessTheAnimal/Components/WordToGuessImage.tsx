@@ -5,7 +5,7 @@ const WordToGuessImage = ({ wordToGuess }: { wordToGuess: string }) => {
             {wordToGuess}
             <div>
                 <img src={"/src/GuessTheAnimal/Images/" + wordToGuess} alt=""
-                    height="500" width="750" style={{ objectFit: "contain" }} />
+                    height="400px" width="700px" style={{ objectFit: "contain" }} />
             </div>
         </div>
     )

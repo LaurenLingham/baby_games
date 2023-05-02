@@ -1,7 +1,7 @@
 const Letter = ({ letter }: { letter: string }) => {
 
   return (
-    <div>
+    <div className="letter">
       {letter}
     </div>
   )
