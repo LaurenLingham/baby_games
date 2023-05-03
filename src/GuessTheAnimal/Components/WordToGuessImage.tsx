@@ -11,50 +11,35 @@ import tigerImage from "../Images/tiger.jpg";
 
 const WordToGuessImage = ({ wordToGuess }: { wordToGuess: string }) => {
 
-    let imageToUse : string;
-    switch(wordToGuess) {
-        case "CAT":
-            imageToUse = catImage;
+    let imageToUse: string;
+    switch (wordToGuess) {
+        case "CAT": imageToUse = catImage;
             break;
-        case "COW":
-            imageToUse = cowImage;
+        case "COW": imageToUse = cowImage;
             break;
-        case "DOG":
-            imageToUse = dogImage;
+        case "DOG": imageToUse = dogImage;
             break;
-        case "DUCK":
-            imageToUse = duckImage;
+        case "DUCK": imageToUse = duckImage;
             break;
-        case "FROG":
-            imageToUse = frogImage;
+        case "FROG": imageToUse = frogImage;
             break;
-        case "OWL":
-            imageToUse = owlImage;
+        case "OWL": imageToUse = owlImage;
             break;
-        case "PANDA":
-            imageToUse = pandaImage;
+        case "PANDA": imageToUse = pandaImage;
             break;
-        case "PIG":
-            imageToUse = pigImage;
+        case "PIG": imageToUse = pigImage;
             break;
-        case "SHEEP":
-            imageToUse = sheepImage;
+        case "SHEEP": imageToUse = sheepImage;
             break;
-        case "TIGER":
-            imageToUse = tigerImage;
+        case "TIGER": imageToUse = tigerImage;
             break;
-        default:
-            imageToUse = "";
+        default: imageToUse = "";
             break;
     }
 
     return (
         <div>
-            {wordToGuess}
-            <div>
-                <img src={imageToUse} alt=""
-                    height="400px" width="700px" style={{ objectFit: "contain" }} />
-            </div>
+            <img src={imageToUse} alt="" className="animal-image" height="400px" width="700px" />
         </div>
     )
 };

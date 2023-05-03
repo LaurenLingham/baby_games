@@ -3,12 +3,16 @@ import AvailableLetterTile from "./AvailableLetterTile";
 
 const AvailableLetters = ({ wordToGuess, letterSelected }: { wordToGuess: string, letterSelected: (letter: string) => void }) => {
 
+    let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
     const letters: JSX.Element[] = [];
     for (let character of wordToGuess) {
+        if (alphabet.includes(character)) {
+            alphabet.replace(character, "");
+        }
         letters.push(<AvailableLetterTile letter={character} letterSelected={letterSelected} />);
     }
 
-    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const numberOfAdditionalLetters = 8 - wordToGuess.length;
     for (let i = 0; i < numberOfAdditionalLetters; i++) {
         const additionalLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
