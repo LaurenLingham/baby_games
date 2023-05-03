@@ -1,14 +1,14 @@
 // import { useEffect, useState } from "react";
 import AvailableLetterTile from "./AvailableLetterTile";
 
-const AvailableLetters = ({ wordToGuess, letterSelected }: { wordToGuess: string, letterSelected: (letter: string) => void }) => {
+const AvailableLetters = ({ wordToGuess, letterSelected, isGuessCorrect }: { wordToGuess: string, letterSelected: (letter: string) => void, isGuessCorrect: boolean }) => {
 
     let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     const letters: JSX.Element[] = [];
     for (let character of wordToGuess) {
         if (alphabet.includes(character)) {
-            alphabet.replace(character, "");
+            alphabet = alphabet.replace(character, "");
         }
         letters.push(<AvailableLetterTile letter={character} letterSelected={letterSelected} />);
     }

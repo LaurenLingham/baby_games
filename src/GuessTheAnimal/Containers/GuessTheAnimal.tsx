@@ -8,14 +8,11 @@ import WordToGuessImage from "../Components/WordToGuessImage";
 const GuessTheAnimal = () => {
   const [wordToGuess, setWordToGuess] = useState("");
   const [currentGuess, setCurrentGuess] = useState("");
+  const [isGuessCorrect, setIsGuessCorrect] = useState(false);
 
   const getNewWord = () => {
     return words[Math.floor(Math.random() * words.length)];
   };
-
-  const hasGuessedCorrectly = () => {
-    return currentGuess == wordToGuess;
-  }
   
   const init = () => {
     let newWordToGuess = getNewWord;
@@ -26,20 +23,23 @@ const GuessTheAnimal = () => {
     init();
   }, [])
 
-  const letterSelected = (letter: string) => {
-    let newGuess = currentGuess.concat(letter);
-    setCurrentGuess(newGuess);
+  const handleLetterSelected = (letter: string) => {
+    if (wordToGuess.length > currentGuess.length) {
+      let newGuess = currentGuess.concat(letter);
+      setCurrentGuess(newGuess);
+    }
+  };
 
-    // if (wordToGuess > currentGuess) {
-    //   let newGuess = currentGuess.concat(letter);
-    //   setCurrentGuess(newGuess);
-    // }
+  const handleSubmitGuess = () => {
+    if (currentGuess === wordToGuess) {
+      setIsGuessCorrect(true);
+    }
   };
 
   return (
     <div className="guess-the-animal-game">
       <div className="available-letters">
-        <AvailableLetters wordToGuess={wordToGuess} letterSelected={letterSelected} />
+        <AvailableLetters wordToGuess={wordToGuess} letterSelected={handleLetterSelected} isGuessCorrect={isGuessCorrect} />
       </div>
       <div className="image-and-guess">
         <WordToGuessImage wordToGuess={wordToGuess} />
