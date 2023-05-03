@@ -14,8 +14,13 @@ const AvailableLetters = ({ wordToGuess, letterSelected }: { wordToGuess: string
     }
 
     const numberOfAdditionalLetters = 8 - wordToGuess.length;
+    const usedLetters = new Set(letters.map((char) => char.props.letter));
     for (let i = 0; i < numberOfAdditionalLetters; i++) {
-        const additionalLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
+        let additionalLetter;
+        do {
+            additionalLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
+        } while (usedLetters.has(additionalLetter));
+        usedLetters.add(additionalLetter);
         letters.push(<AvailableLetterTile letter={additionalLetter} letterSelected={letterSelected} />);
     }
     

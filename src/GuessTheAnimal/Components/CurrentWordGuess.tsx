@@ -8,8 +8,11 @@ const CurrentWordGuess = ({ wordToGuess, currentGuess }: { wordToGuess: string, 
   // wordToGuess.split("").map((letter, index) => ())
 
   const letters: JSX.Element[] = [];
+  
   for (let character of currentGuess) {
-    letters.push(<GuessedLetterTile letter={character} />);
+    if (wordToGuess.length > currentGuess.length) {
+      letters.push(<GuessedLetterTile letter={character} />);
+    }
   }
 
   const numberOfAdditionalLetters = wordToGuess.length - currentGuess.length;

@@ -18,7 +18,7 @@ const GuessTheAnimal = () => {
   }
   
   const init = () => {
-    let newWordToGuess = getNewWord();
+    let newWordToGuess = getNewWord;
     setWordToGuess(newWordToGuess);
   };
 
