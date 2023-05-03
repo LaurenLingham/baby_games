@@ -14,12 +14,14 @@ const CurrentWordGuess = ({ wordToGuess, currentGuess }: { wordToGuess: string, 
 
   const numberOfAdditionalLetters = wordToGuess.length - currentGuess.length;
   for (let i = 0; i < numberOfAdditionalLetters; i++) {
-      letters.push(<GuessedLetterTile letter=""/>);
+    letters.push(<GuessedLetterTile letter="" />);
   }
 
   return (
-    <div className="current-guess">
-      {...letters}
+    <div className="guess-box">
+      <div className="current-guess">
+        {...letters}
+      </div>
     </div>
   )
 };

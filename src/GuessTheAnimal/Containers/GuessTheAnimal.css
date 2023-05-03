@@ -17,19 +17,27 @@
 .image-and-guess {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
-.available-letter-tile {
+.letter-tile {
     display: flex;
     width: 100px;
     height: 100px;
     margin: 1rem;
-    border: solid rgb(224, 162, 255) 7px;
-    background-color: rgb(255, 255, 227);
     color: rgb(224, 162, 255);
     font-weight: bold;
+}
+
+.available-letter-tile {
+    background-color: rgb(255, 255, 227);
+    border: solid rgb(224, 162, 255) 7px;
     border-radius: 20px;
+}
+
+.guessed-letter-tile {
+    border-bottom: solid rgb(224, 162, 255) 7px;
+    color: rgb(224, 162, 255);
 }
 
 .letter {
@@ -39,20 +47,18 @@
     text-align: center;
 }
 
-.guessed-letter-tile {
+.guess-box {
     display: flex;
-    width: 100px;
-    height: 100px;
-    margin: 1rem;
-    border-bottom: solid rgb(232, 187, 255) 7px;
-    color: rgb(232, 187, 255);
-    font-weight: bold;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .current-guess {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    background-color: white;
+    border-radius: 40px;
 }
 
 // yellow rgb(253, 255, 136)
