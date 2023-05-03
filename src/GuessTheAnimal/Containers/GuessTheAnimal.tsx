@@ -30,9 +30,10 @@ const GuessTheAnimal = () => {
     let newGuess = currentGuess.concat(letter);
     setCurrentGuess(newGuess);
 
-    console.log({currentGuess});
-    console.log({newGuess});
-    console.log({letter});
+    // if (wordToGuess > currentGuess) {
+    //   let newGuess = currentGuess.concat(letter);
+    //   setCurrentGuess(newGuess);
+    // }
   };
 
   return (
@@ -42,7 +43,6 @@ const GuessTheAnimal = () => {
       </div>
       <div className="image-and-guess">
         <WordToGuessImage wordToGuess={wordToGuess} />
-        {currentGuess}
         <CurrentWordGuess wordToGuess={wordToGuess} currentGuess={currentGuess}/>
       </div>
     </div>

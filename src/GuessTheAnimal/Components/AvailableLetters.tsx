@@ -8,7 +8,7 @@ const AvailableLetters = ({ wordToGuess, letterSelected }: { wordToGuess: string
         letters.push(<AvailableLetterTile letter={character} letterSelected={letterSelected} />);
     }
 
-    const alphabet = "abcdefghijklmnopqrstuvwxyz";
+    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const numberOfAdditionalLetters = 8 - wordToGuess.length;
     for (let i = 0; i < numberOfAdditionalLetters; i++) {
         const additionalLetter = alphabet[Math.floor(Math.random() * alphabet.length)];

@@ -1,6 +1,10 @@
-const GuessedLetterTile = () => {
+import Letter from "./Letter";
+
+const GuessedLetterTile = ({ letter }: { letter: string }) => {
     return (
-        <div>GuessedLetterTile</div>
+        <div className="guessed-letter-tile">
+            <Letter letter={letter} />
+        </div>
     )
 };
 

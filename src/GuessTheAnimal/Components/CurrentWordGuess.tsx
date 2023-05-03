@@ -7,14 +7,19 @@ const CurrentWordGuess = ({ wordToGuess, currentGuess }: { wordToGuess: string, 
 
   // wordToGuess.split("").map((letter, index) => ())
 
-  // const letters: JSX.Element[] = [];
-  // for (let character of currentGuess) {
-  //   letters.push(<GuessedLetterTile letter={character} />);
-  // }
+  const letters: JSX.Element[] = [];
+  for (let character of currentGuess) {
+    letters.push(<GuessedLetterTile letter={character} />);
+  }
+
+  const numberOfAdditionalLetters = wordToGuess.length - currentGuess.length;
+  for (let i = 0; i < numberOfAdditionalLetters; i++) {
+      letters.push(<GuessedLetterTile letter=""/>);
+  }
 
   return (
-    <div>
-      <GuessedLetterTile />
+    <div className="current-guess">
+      {...letters}
     </div>
   )
 };

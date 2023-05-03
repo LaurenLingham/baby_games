@@ -35,3 +35,17 @@
     font-size: 4em;
     text-align: center;
 }
+
+.guessed-letter-tile {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    margin: 1rem;
+    border-bottom: solid white 3px;
+}
+
+.current-guess {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
