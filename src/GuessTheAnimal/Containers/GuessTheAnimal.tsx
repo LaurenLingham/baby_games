@@ -49,7 +49,9 @@ const GuessTheAnimal = () => {
           <button className="clear-button" onClick={handleClearGuess}>Clear</button>
           {currentGuess === wordToGuess
             ? <ConfettiButton />
-            : <TryAgainButton />
+            : currentGuess.length === wordToGuess.length
+              ? <TryAgainButton />
+              : <button className="enter-button-disabled" disabled={true}>Enter</button>
           }
         </div>
       </div>

@@ -5,7 +5,11 @@
     flex-direction: row;
     justify-content: space-between;
     gap: 2rem;
-    margin: 2rem 5rem;
+    /* margin: 2rem 5rem; */
+    height: 100vh;
+    width: 1000px;
+    margin: auto;
+    padding-top: 20px;
 }
 
 .letters-container {
@@ -35,9 +39,13 @@
     border-radius: 20px;
 }
 
+.available-letter-tile:hover {
+    border: solid rgb(193, 84, 247) 7px;
+    color: rgb(193, 84, 247);
+}
+
 .guessed-letter-tile {
     border-bottom: solid rgb(224, 162, 255) 7px;
-    color: rgb(224, 162, 255);
 }
 
 .letter {
@@ -70,12 +78,12 @@
 .clear-enter-buttons {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 1rem;
 }
 
 .enter-button {
-  background-color: #c2fbd7;
+  background-color: #a4ffc5;
   border-radius: 100px;
   color: green;
   cursor: pointer;
@@ -85,6 +93,17 @@
   border: 0;
   font-size: 30px;
   touch-action: manipulation;
+}
+
+.enter-button-disabled {
+    background-color: #9a9a9a;
+    border-radius: 100px;
+    color: rgb(222, 222, 222);
+    padding: 7px 20px;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 30px;
 }
 
 .enter-button:hover {
@@ -114,4 +133,27 @@
     display: flex;
     flex-direction: row;
     gap: 3rem;
+  }
+
+  .message-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(239, 206, 255);
+    color: rgb(193, 84, 247);
+    font-size: 2.5em;
+    border: 10px solid transparent;
+    border-image: linear-gradient(to top left, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+    font-size: 2em;
+  }
+  
+  .message-container.active {
+    opacity: 1;
+    visibility: visible;
   }

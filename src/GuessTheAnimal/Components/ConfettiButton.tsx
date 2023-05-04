@@ -3,7 +3,7 @@ import confetti from "canvas-confetti";
 const ConfettiButton: React.FC = () => {
   const handleClick = () => {
     confetti({
-        particleCount: 100, spread: 70, origin: { y: 0.6 }
+        particleCount: 500, spread: 100, origin: { y: 0.8 }
     });
   };
 
