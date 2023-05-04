@@ -15,7 +15,7 @@ const GuessTheAnimal = () => {
   const getNewWord = () => {
     return words[Math.floor(Math.random() * words.length)];
   };
-  
+
   const init = () => {
     let newWordToGuess = getNewWord;
     setWordToGuess(newWordToGuess);

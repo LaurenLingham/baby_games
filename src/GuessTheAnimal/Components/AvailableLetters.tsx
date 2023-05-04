@@ -23,7 +23,7 @@ const AvailableLetters = ({ wordToGuess, letterSelected, isGuessCorrect }: { wor
         usedLetters.add(additionalLetter);
         letters.push(<AvailableLetterTile letter={additionalLetter} letterSelected={letterSelected} />);
     }
-    
+
     const scramble = (inputElements: JSX.Element[]): JSX.Element[] => {
         const elements = [...inputElements];
         for (let i = elements.length - 1; i > 0; i--) {
