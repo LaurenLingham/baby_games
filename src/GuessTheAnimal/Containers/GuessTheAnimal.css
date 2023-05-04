@@ -5,7 +5,7 @@
     flex-direction: row;
     justify-content: space-between;
     gap: 2rem;
-    margin: 3.2rem 5rem;
+    margin: 2rem 5rem;
 }
 
 .letters-container {
@@ -67,5 +67,45 @@
     border-radius: 40px;
 }
 
-// yellow rgb(253, 255, 136)
-// blue rgb(0, 247, 255)
+.clear-enter-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.enter-button {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  color: green;
+  cursor: pointer;
+  padding: 7px 20px;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 30px;
+  touch-action: manipulation;
+}
+
+.enter-button:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.2);
+}
+
+.clear-button {
+    background-color: #fbc2c2;
+    border-radius: 100px;
+    color: rgb(128, 0, 0);
+    cursor: pointer;
+    padding: 7px 20px;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 30px;
+    touch-action: manipulation;
+  }
+  
+  .clear-button:hover {
+    box-shadow: rgba(187, 44, 44, 0.35) 0 -25px 18px -14px inset,rgba(187, 44, 44, 0.25) 0 1px 2px,rgba(187, 44, 44, 0.25) 0 2px 4px,rgba(187, 44, 44, 0.25) 0 4px 8px,rgba(187, 44, 44, 0.25) 0 8px 16px,rgba(187, 44, 44, 0.25) 0 16px 32px;
+    transform: scale(1.2);
+  }

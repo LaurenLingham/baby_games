@@ -4,6 +4,7 @@ import words from "../WordList.json";
 import AvailableLetters from "../Components/AvailableLetters";
 import CurrentWordGuess from "../Components/CurrentWordGuess";
 import WordToGuessImage from "../Components/WordToGuessImage";
+import ConfettiButton from "../Components/ConfettiButton";
 
 const GuessTheAnimal = () => {
   const [wordToGuess, setWordToGuess] = useState("");
@@ -30,11 +31,10 @@ const GuessTheAnimal = () => {
     }
   };
 
-  const handleSubmitGuess = () => {
-    if (currentGuess === wordToGuess) {
-      setIsGuessCorrect(true);
-    }
-  };
+  const handleClearGuess = () => {
+    const newGuess = "";
+    setCurrentGuess(newGuess);
+  }
 
   return (
     <div className="guess-the-animal-game">
@@ -43,7 +43,14 @@ const GuessTheAnimal = () => {
       </div>
       <div className="image-and-guess">
         <WordToGuessImage wordToGuess={wordToGuess} />
-        <CurrentWordGuess wordToGuess={wordToGuess} currentGuess={currentGuess}/>
+        <CurrentWordGuess wordToGuess={wordToGuess} currentGuess={currentGuess} />
+        <div className="clear-enter-buttons">
+          <button className="clear-button" onClick={handleClearGuess}>Clear</button>
+          {currentGuess === wordToGuess
+            ? <ConfettiButton />
+            : <button className="enter-button">Enter</button>
+          }
+        </div>
       </div>
     </div>
   );
