@@ -5,6 +5,7 @@ import AvailableLetters from "../Components/AvailableLetters";
 import CurrentWordGuess from "../Components/CurrentWordGuess";
 import WordToGuessImage from "../Components/WordToGuessImage";
 import ConfettiButton from "../Components/ConfettiButton";
+import TryAgainButton from "../Components/TryAgainButton";
 
 const GuessTheAnimal = () => {
   const [wordToGuess, setWordToGuess] = useState("");
@@ -48,7 +49,7 @@ const GuessTheAnimal = () => {
           <button className="clear-button" onClick={handleClearGuess}>Clear</button>
           {currentGuess === wordToGuess
             ? <ConfettiButton />
-            : <button className="enter-button">Enter</button>
+            : <TryAgainButton />
           }
         </div>
       </div>
