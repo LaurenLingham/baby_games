@@ -1,20 +1,26 @@
 import { useState } from "react";
 
-const TryAgainButton: React.FC = () => {
-  const [message, setMessage] = useState("");
+interface Props {
+  handleClearGuess: () => void;
+};
 
-  const showMessage = (msg: string, duration: number) => {
-    setMessage("Good guess but not right");
+const TryAgainButton = ({ handleClearGuess }: Props) => {
+  
+  const [displayMessage, setDisplayMessage] = useState(false);
+
+  const showMessage = () => {
+    setDisplayMessage(true);
     setTimeout(() => {
-      setMessage("");
-    }, duration);
+      setDisplayMessage(false);
+      handleClearGuess();
+    }, 5000);
   };
 
   return (
     <div className="try-again">
-      <button className="enter-button" onClick={() => showMessage(message, 5000)}>Enter</button>
-      <div className={`message-container ${message ? "active" : ""}`}>
-        <p>{message}</p>
+      <button className="enter-button" onClick={showMessage}>Enter</button>
+      <div className={`message-container ${displayMessage ? "active" : ""}`}>
+        <p>Good guess but not right</p>
         <p>Try again</p>
       </div>
     </div>

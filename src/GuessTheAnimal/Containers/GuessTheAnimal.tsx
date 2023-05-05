@@ -35,7 +35,13 @@ const GuessTheAnimal = () => {
   const handleClearGuess = () => {
     const newGuess = "";
     setCurrentGuess(newGuess);
-  }
+  };
+
+  const handleResetGame = () => {
+    const newGuess = "";
+    setCurrentGuess(newGuess);
+    init();
+  };
 
   return (
     <div className="guess-the-animal-game">
@@ -48,9 +54,9 @@ const GuessTheAnimal = () => {
         <div className="clear-enter-buttons">
           <button className="clear-button" onClick={handleClearGuess}>Clear</button>
           {currentGuess === wordToGuess
-            ? <ConfettiButton />
+            ? <ConfettiButton handleResetGame={handleResetGame}/>
             : currentGuess.length === wordToGuess.length
-              ? <TryAgainButton />
+              ? <TryAgainButton handleClearGuess={handleClearGuess}/>
               : <button className="enter-button-disabled" disabled={true}>Enter</button>
           }
         </div>
