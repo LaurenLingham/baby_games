@@ -46,7 +46,7 @@ const GuessTheAnimal = () => {
   return (
     <div className="guess-the-animal-game">
       <div className="available-letters">
-        <AvailableLetters wordToGuess={ wordToGuess } letterSelected={ handleLetterSelectedCallback } />
+        <AvailableLetters wordToGuess={ wordToGuess } letterSelected={ handleLetterSelected } />
       </div>
       <div className="image-and-guess">
         <WordToGuessImage wordToGuess={ wordToGuess } />
