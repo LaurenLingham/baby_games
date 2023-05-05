@@ -1,7 +1,7 @@
 // import { useEffect, useState } from "react";
 import AvailableLetterTile from "./AvailableLetterTile";
 
-const AvailableLetters = ({ wordToGuess, letterSelected, isGuessCorrect }: { wordToGuess: string, letterSelected: (letter: string) => void, isGuessCorrect: boolean }) => {
+const AvailableLetters = ({ wordToGuess, letterSelected }: { wordToGuess: string, letterSelected: (letter: string) => void }) => {
 
     let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 

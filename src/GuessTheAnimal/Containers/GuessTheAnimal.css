@@ -40,8 +40,19 @@
 }
 
 .available-letter-tile:hover {
+    cursor: pointer;
     border: solid rgb(193, 84, 247) 7px;
     color: rgb(193, 84, 247);
+    animation-name: hoverAnimation;
+    animation-duration: 0.75s;
+    animation-timing-function: ease;
+}
+
+@keyframes hoverAnimation {
+    0% { color: rgb(224, 162, 255); }
+    33% { color: rgb(193, 84, 247); }
+    66% { color: rgb(224, 162, 255); }
+    100% { color: rgb(193, 84, 247); }
 }
 
 .guessed-letter-tile {
