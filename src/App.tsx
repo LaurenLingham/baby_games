@@ -1,13 +1,12 @@
-import './App.css'
-import GuessTheAnimal from './GuessTheAnimal/Containers/GuessTheAnimal'
+import GuessTheAnimal from "./GuessTheAnimal/Containers/GuessTheAnimal";
 
 function App() {
 
   return (
     <>
-      <GuessTheAnimal/>
+      <GuessTheAnimal />
     </>
   )
-}
+};
 
-export default App
+export default App;
