@@ -1,9 +1,22 @@
 import Letter from "./Letter";
 
-const AvailableLetterTile = ({ letter, letterSelected }: { letter: string, letterSelected: (letter: string) => void }) => {
-
+const AvailableLetterTile = ({
+  letter,
+  letterSelected,
+  guessed,
+  index
+}: {
+  letter: string,
+  letterSelected: (letter: string, index: number) => void,
+  guessed: boolean,
+  index: number
+}) => {
   const handleClick = () => {
-    letterSelected(letter);
+    if (guessed) {
+      return;
+    }
+
+    letterSelected(letter, index);
   };
 
   return (
