@@ -13,7 +13,7 @@ const TryAgainButton = ({ handleClearGuess }: Props) => {
     setTimeout(() => {
       setDisplayMessage(false);
       handleClearGuess();
-    }, 5000);
+    }, 4000);
   };
 
   return (

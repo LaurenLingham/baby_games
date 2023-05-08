@@ -29,8 +29,8 @@
     width: 100px;
     height: 100px;
     margin: 1rem;
-    color: rgb(224, 162, 255);
     font-weight: bold;
+    color: rgb(224, 162, 255);
 }
 
 .available-letter-tile {
@@ -46,6 +46,13 @@
     animation-name: hoverAnimation;
     animation-duration: 0.75s;
     animation-timing-function: ease;
+}
+
+.unavailable-letter-tile {
+    background-color: rgb(222, 222, 222);
+    color: #9a9a9a;
+    border: solid #9a9a9a 7px;
+    border-radius: 20px;
 }
 
 @keyframes hoverAnimation {

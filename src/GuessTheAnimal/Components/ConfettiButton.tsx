@@ -17,7 +17,7 @@ const ConfettiButton = ({ handleResetGame }: Props) => {
     setTimeout(() => {
       setDisplayMessage(false);
       handleResetGame();
-    }, 5000);
+    }, 4000);
   };
 
   return (
