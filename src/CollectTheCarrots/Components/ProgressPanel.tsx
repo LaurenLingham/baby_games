@@ -1,6 +1,7 @@
-const ProgressPanel = () => {
+const ProgressPanel = ({ collectedCarrots }: { collectedCarrots: number }) => {
+    
     return (
-      <div>ProgressPanel</div>
+      <div>{collectedCarrots} carrots collected</div>
     )
   };
   

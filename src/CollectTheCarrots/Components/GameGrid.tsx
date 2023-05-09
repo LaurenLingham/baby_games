@@ -11,8 +11,7 @@ interface Carrot {
     boxId: number;
 }
 
-const GameGrid = () => {
-
+const GameGrid = ({ increaseCollectedCarrots }: { increaseCollectedCarrots: () => void }) => {
     const [boxes, setBoxes] = useState<Box[]>([]);
     const [carrots, setCarrots] = useState<Carrot[]>([]);
 
@@ -21,16 +20,28 @@ const GameGrid = () => {
             id: index,
             hasCarrot: false,
         }));
-        const randomCarrotIndexes = Array.from({ length: 8 }, () =>
-            Math.floor(Math.random() * 25)
-        );
+
+        let randomCarrotIndexes: number[] = [];
+        for (let i = 0; i < 8; i++) {
+            let newCarrotIndex;
+
+            do {
+                newCarrotIndex = Math.floor(Math.random() * 25);
+            }
+            while(randomCarrotIndexes.includes(newCarrotIndex));
+
+            randomCarrotIndexes.push(newCarrotIndex);
+        }
+
         const newCarrots = randomCarrotIndexes.map((index) => ({
             boxId: index
         }));
+
         newCarrots.forEach((carrot) => {
             const boxIndex = carrot.boxId;
             newBoxes[boxIndex].hasCarrot = true;
         });
+
         setBoxes(newBoxes);
         setCarrots(newCarrots);
     }, []);
@@ -44,11 +55,13 @@ const GameGrid = () => {
             const newBoxes = [...boxes];
             newBoxes[boxIndex].hasCarrot = false;
             setBoxes(newBoxes);
+
+            increaseCollectedCarrots();
         }
     };
 
     return (
-        <div>
+        <div className="game-grid">
             {boxes.map((box) => (
                 <div onClick={() => handleBoxClick(box.id)} >
                     Box

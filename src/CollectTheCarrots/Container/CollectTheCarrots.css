@@ -11,3 +11,19 @@
     margin: auto;
     padding-top: 20px;
 }
+
+.game-grid {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+}
+
+.carrot {
+    font-size: 4em;
+}

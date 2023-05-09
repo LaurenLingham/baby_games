@@ -1,7 +1,9 @@
 const Box = () => {
     
     return (
-        <div>Box</div>
+        <div className="box">
+            Box
+        </div>
     )
 };
 

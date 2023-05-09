@@ -1,7 +1,8 @@
 const Carrot = () => {
+    let rotation = Math.floor(Math.random() * 360);
 
     return (
-        <div>🥕</div>
+        <div className="carrot" style={{transform: `rotate(${rotation}deg)`}}>🥕</div>
     )
 };
 
