@@ -22,7 +22,7 @@ const GameGrid = ({ increaseCollectedCarrots }: { increaseCollectedCarrots: () =
         }));
 
         let randomCarrotIndexes: number[] = [];
-        for (let i = 0; i < 8; i++) {
+        for (let i = 0; i < 10; i++) {
             let newCarrotIndex;
 
             do {
@@ -64,7 +64,6 @@ const GameGrid = ({ increaseCollectedCarrots }: { increaseCollectedCarrots: () =
         <div className="game-grid">
             {boxes.map((box) => (
                 <div onClick={() => handleBoxClick(box.id)} >
-                    Box
                     {box.hasCarrot && <Carrot />}
                 </div>
             ))}
