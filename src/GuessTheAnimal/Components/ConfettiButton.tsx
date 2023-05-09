@@ -22,8 +22,8 @@ const ConfettiButton = ({ handleResetGame }: Props) => {
 
   return (
     <div>
-      <button className="enter-button" onClick={handleClick}>Enter</button>
-      <div className={`message-container ${displayMessage ? "active" : ""}`}>
+      <button className="enter-button" onClick={ handleClick }>Enter</button>
+      <div className={ `message-container ${ displayMessage ? "active" : "" }` }>
         <p>Well done!</p>
         <p>You guessed the correct animal</p>
       </div>

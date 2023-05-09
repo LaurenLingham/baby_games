@@ -106,18 +106,18 @@ const GuessTheAnimal = () => {
   return (
     <div className="guess-the-animal-game">
       <div className="available-letters">
-        <AvailableLetters letterSelected={handleLetterSelected} displayedLetters={displayedLetters} />
+        <AvailableLetters letterSelected={ handleLetterSelected } displayedLetters={ displayedLetters } />
       </div>
       <div className="image-and-guess">
-        <WordToGuessImage wordToGuess={wordToGuess} />
-        <CurrentWordGuess wordToGuess={wordToGuess} currentGuess={currentGuess} />
+        <WordToGuessImage wordToGuess={ wordToGuess } />
+        <CurrentWordGuess wordToGuess={ wordToGuess } currentGuess={ currentGuess } />
         <div className="clear-enter-buttons">
-          <button className="clear-button" onClick={handleClearGuess}>Clear</button>
-          {currentGuess === wordToGuess
-            ? <ConfettiButton handleResetGame={handleResetGame} />
+          <button className="clear-button" onClick={ handleClearGuess }>Clear</button>
+          { currentGuess === wordToGuess
+            ? <ConfettiButton handleResetGame={ handleResetGame } />
             : currentGuess.length === wordToGuess.length
-              ? <TryAgainButton handleClearGuess={handleClearGuess} />
-              : <button className="enter-button-disabled" disabled={true}>Enter</button>
+              ? <TryAgainButton handleClearGuess={ handleClearGuess } />
+              : <button className="enter-button-disabled" disabled={ true }>Enter</button>
           }
         </div>
       </div>

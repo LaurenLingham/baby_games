@@ -4,7 +4,7 @@ const CurrentWordGuess = ({ wordToGuess, currentGuess }: { wordToGuess: string, 
   const letters: JSX.Element[] = [];
 
   for (let character of currentGuess) {
-    letters.push(<GuessedLetterTile letter={character} />);
+    letters.push(<GuessedLetterTile letter={ character } />);
   }
 
   const numberOfAdditionalLetters = wordToGuess.length - currentGuess.length;
@@ -15,7 +15,7 @@ const CurrentWordGuess = ({ wordToGuess, currentGuess }: { wordToGuess: string, 
   return (
     <div className="guess-box">
       <div className="current-guess">
-        {...letters}
+        { ...letters }
       </div>
     </div>
   )

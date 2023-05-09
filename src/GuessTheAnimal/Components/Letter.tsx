@@ -2,7 +2,7 @@ const Letter = ({ letter }: { letter: string }) => {
 
   return (
     <div className="letter">
-      {letter}
+      { letter }
     </div>
   )
 };

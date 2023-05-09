@@ -7,13 +7,13 @@ const AvailableLetters = ({ letterSelected, displayedLetters }: {
     const availableLetterTiles: JSX.Element[] = displayedLetters
         .map((displayedLetter, i) =>
             <AvailableLetterTile
-                letter={displayedLetter.letter} letterSelected={letterSelected}
-                guessed={displayedLetter.guessed} index={i}
+                letter={ displayedLetter.letter } letterSelected={ letterSelected }
+                guessed={ displayedLetter.guessed } index={ i }
             />);
 
     return (
         <div className="letters-container">
-            {...availableLetterTiles}
+            { ...availableLetterTiles }
         </div>
     )
 };

@@ -18,8 +18,8 @@ const TryAgainButton = ({ handleClearGuess }: Props) => {
 
   return (
     <div className="try-again">
-      <button className="enter-button" onClick={showMessage}>Enter</button>
-      <div className={`message-container ${displayMessage ? "active" : ""}`}>
+      <button className="enter-button" onClick={ showMessage }>Enter</button>
+      <div className={ `message-container ${ displayMessage ? "active" : "" }` }>
         <p>Good guess but not right</p>
         <p>Try again</p>
       </div>

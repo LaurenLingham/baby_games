@@ -39,7 +39,7 @@ const WordToGuessImage = ({ wordToGuess }: { wordToGuess: string }) => {
 
     return (
         <div>
-            <img src={imageToUse} alt="" className="animal-image" height="400px" width="700px" />
+            <img src={ imageToUse } alt="" className="animal-image" height="400px" width="700px" />
         </div>
     )
 };

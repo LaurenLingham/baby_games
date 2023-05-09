@@ -14,9 +14,9 @@ const CollectTheCarrots = () => {
   return (
     <div className="collect-the-carrots-game">
       <div className="background-image">
-        <GameGrid increaseCollectedCarrots={increaseCollectedCarrots} />
+        <GameGrid increaseCollectedCarrots={ increaseCollectedCarrots } />
       </div>
-      <ProgressPanel collectedCarrots={collectedCarrots} />
+      <ProgressPanel collectedCarrots={ collectedCarrots } />
     </div>
   )
 };

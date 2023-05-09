@@ -12,13 +12,14 @@ const AvailableLetterTile = ({ letter, letterSelected, guessed, index }: {
 
   return (
     <>
-      {!guessed
-        ? <div className="letter-tile available-letter-tile" onClick={handleClick}>
-          <Letter letter={letter} />
+      { !guessed
+        ? <div className="letter-tile available-letter-tile" onClick={ handleClick }>
+          <Letter letter={ letter } />
         </div>
-        : <div className="letter-tile unavailable-letter-tile" onClick={handleClick}>
-          <Letter letter={letter} />
-        </div>}
+        : <div className="letter-tile unavailable-letter-tile" onClick={ handleClick }>
+          <Letter letter={ letter } />
+        </div>
+      }
     </>
   )
 };
