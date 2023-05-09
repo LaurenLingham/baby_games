@@ -7,7 +7,7 @@ import WordToGuessImage from "../Components/WordToGuessImage";
 import ConfettiButton from "../Components/ConfettiButton";
 import TryAgainButton from "../Components/TryAgainButton";
 
-const GuessTheAnimal = () => {
+const GuessTheAnimal = ({ handleSplashScreenReturn }: { handleSplashScreenReturn: () => void }) => {
   const [wordToGuess, setWordToGuess] = useState("");
   const [currentGuess, setCurrentGuess] = useState("");
   const [displayedLetters, setDisplayedLetters] = useState<{ letter: string, guessed: boolean }[]>([]);
@@ -104,21 +104,24 @@ const GuessTheAnimal = () => {
   };
 
   return (
-    <div className="guess-the-animal-game">
-      <div className="available-letters">
-        <AvailableLetters letterSelected={ handleLetterSelected } displayedLetters={ displayedLetters } />
-      </div>
-      <div className="image-and-guess">
-        <WordToGuessImage wordToGuess={ wordToGuess } />
-        <CurrentWordGuess wordToGuess={ wordToGuess } currentGuess={ currentGuess } />
-        <div className="clear-enter-buttons">
-          <button className="clear-button" onClick={ handleClearGuess }>Clear</button>
-          { currentGuess === wordToGuess
-            ? <ConfettiButton handleResetGame={ handleResetGame } />
-            : currentGuess.length === wordToGuess.length
-              ? <TryAgainButton handleClearGuess={ handleClearGuess } />
-              : <button className="enter-button-disabled" disabled={ true }>Enter</button>
-          }
+    <div className="game-container">
+      <button className="home-button" onClick={handleSplashScreenReturn}>Back to Games</button>
+      <div className="guess-the-animal-game">
+        <div className="available-letters">
+          <AvailableLetters letterSelected={handleLetterSelected} displayedLetters={displayedLetters} />
+        </div>
+        <div className="image-and-guess">
+          <WordToGuessImage wordToGuess={wordToGuess} />
+          <CurrentWordGuess wordToGuess={wordToGuess} currentGuess={currentGuess} />
+          <div className="clear-enter-buttons">
+            <button className="clear-button" onClick={handleClearGuess}>Clear</button>
+            {currentGuess === wordToGuess
+              ? <ConfettiButton handleResetGame={handleResetGame} />
+              : currentGuess.length === wordToGuess.length
+                ? <TryAgainButton handleClearGuess={handleClearGuess} />
+                : <button className="enter-button-disabled" disabled={true}>Enter</button>
+            }
+          </div>
         </div>
       </div>
     </div>

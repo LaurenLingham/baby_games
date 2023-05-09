@@ -6,6 +6,10 @@ import CollectTheCarrots from "./CollectTheCarrots/Container/CollectTheCarrots";
 function App() {
   const [currentScreen, setCurrentScreen] = useState(0);
 
+  const handleSplashScreenReturn = () => {
+    setCurrentScreen(0);
+  }
+
   const handleGuessTheAnimalGameSelected = () => {
     setCurrentScreen(1);
   }
@@ -23,16 +27,16 @@ function App() {
         handleCollectTheCarrotsGameSelected={ handleCollectTheCarrotsGameSelected } />;
       break;
     case 1:
-      screenToRender = <GuessTheAnimal />;
+      screenToRender = <GuessTheAnimal handleSplashScreenReturn={ handleSplashScreenReturn } />;
       break;
     case 2:
-      screenToRender= <CollectTheCarrots />;
+      screenToRender= <CollectTheCarrots handleSplashScreenReturn={ handleSplashScreenReturn } />;
       break;
   }
 
   return (
     <>
-      {screenToRender}
+      { screenToRender }
     </>
   )
 };

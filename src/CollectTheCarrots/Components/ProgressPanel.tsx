@@ -1,11 +1,12 @@
 import bunnyWithBasket from "../Images/bunny_basket.jpeg";
 import bunnyWithCarrot from "../Images/bunny_carrot.jpeg"
 
-const ProgressPanel = ({ collectedCarrots }: { collectedCarrots: number }) => {
+const ProgressPanel = ({ collectedCarrots, handleSplashScreenReturn }: { collectedCarrots: number, handleSplashScreenReturn: () => void }) => {
 
     return (
         <div className="progress-panel">
-            { collectedCarrots < 10
+            <button className="home-button" onClick={handleSplashScreenReturn}>Back to Games</button>
+            {collectedCarrots < 10
                 ? <div>
                     <img src={bunnyWithBasket} alt="" width="350px" />
                     <p>{collectedCarrots} carrots collected</p>
@@ -14,7 +15,7 @@ const ProgressPanel = ({ collectedCarrots }: { collectedCarrots: number }) => {
                 : <div>
                     <img src={bunnyWithCarrot} alt="" width="350px" />
                     <p>Congratulations! <br /> You found all of the carrots</p>
-                    <button className="play-again-button">Play again</button>
+                    <button className="play-again-button" onClick={handleSplashScreenReturn}>Play again</button>
                 </div>
             }
         </div>
