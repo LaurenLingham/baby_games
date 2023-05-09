@@ -1,6 +1,7 @@
 import "./SplashScreen.css";
 import Lottie from "lottie-react";
 import purpleStars from "./purpleStars.json";
+import ParticlesBackground from "./ParticlesBackground";
 
 const SplashScreen = (
     { handleGuessTheAnimalGameSelected, handleCollectTheCarrotsGameSelected }:
@@ -16,6 +17,7 @@ const SplashScreen = (
 
     return (
         <div className="splash-screen">
+            <ParticlesBackground />
             <Lottie className="animation" animationData={purpleStars} loop={true} />
             <div className="splash-buttons">
                 <div className="game-link animal-game">
