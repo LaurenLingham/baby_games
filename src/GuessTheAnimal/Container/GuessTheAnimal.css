@@ -198,6 +198,6 @@
 }
 
 .home-button:hover {
-    box-shadow: rgb(0, 128, 87) 0 -25px 18px -14px inset, rgb(0, 128, 87) 0 1px 2px, rgb(0, 128, 87) 0 2px 4px, rgb(0, 128, 87) 0 4px 8px, rgb(0, 128, 87)0 8px 16px, rgb(0, 128, 87) 0 16px 32px;
+    box-shadow: rgb(0, 128, 87) 0 -25px 18px -14px inset, rgb(0, 128, 87) 0 1px 2px, rgb(0, 128, 87) 0 2px 4px, rgb(0, 128, 87) 0 4px 8px, rgb(0, 128, 87)0 8px 16px, rgba(187, 44, 44, 0.25) 0 16px 32px;
     transform: scale(1.2);
 }

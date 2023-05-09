@@ -2,17 +2,12 @@
     position: relative;
 }
 
-.animation {
-    width: 100%;
-    height: 100vh;
-}
-
 .splash-buttons {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: 2;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -47,7 +42,13 @@ button:hover {
     border: solid #fa6c9e 5px;
     border-radius: 40px;
     padding: 20px;
-    background-color: pink;
+    background-color: #fde4ff;
+}
+
+.game-link:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
 }
 
 .game-image {
@@ -56,6 +57,14 @@ button:hover {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    border: solid 5px white;
     border-radius: 50px;
+}
+
+.stars-animation {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }

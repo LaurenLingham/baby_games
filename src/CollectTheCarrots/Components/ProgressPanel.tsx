@@ -1,7 +1,7 @@
 import bunnyWithBasket from "../Images/bunny_basket.jpeg";
 import bunnyWithCarrot from "../Images/bunny_carrot.jpeg"
 
-const ProgressPanel = ({ collectedCarrots, handleSplashScreenReturn }: { collectedCarrots: number, handleSplashScreenReturn: () => void }) => {
+const ProgressPanel = ({ collectedCarrots, handleSplashScreenReturn, handleResetGame }: { collectedCarrots: number, handleSplashScreenReturn: () => void, handleResetGame: () => void }) => {
 
     return (
         <div className="progress-panel">
@@ -15,7 +15,7 @@ const ProgressPanel = ({ collectedCarrots, handleSplashScreenReturn }: { collect
                 : <div>
                     <img src={ bunnyWithCarrot } className="win-image" alt="" width="350px" />
                     <p>Congratulations! <br /> You found all of the carrots</p>
-                    <button className="play-again-button" onClick={ handleSplashScreenReturn }>Play again</button>
+                    <button className="play-again-button" onClick={ handleResetGame }>Play again</button>
                 </div>
             }
         </div>
