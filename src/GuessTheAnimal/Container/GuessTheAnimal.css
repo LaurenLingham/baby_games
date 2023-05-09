@@ -181,3 +181,23 @@
     opacity: 1;
     visibility: visible;
 }
+
+.home-button {
+    width: 250px;
+    background-color: #c2fbf0;
+    border-radius: 100px;
+    color: rgb(0, 128, 87);
+    cursor: pointer;
+    padding: 20px 20px;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 30px;
+    touch-action: manipulation;
+    margin: 40px;
+}
+
+.home-button:hover {
+    box-shadow: rgb(0, 128, 87) 0 -25px 18px -14px inset, rgb(0, 128, 87) 0 1px 2px, rgb(0, 128, 87) 0 2px 4px, rgb(0, 128, 87) 0 4px 8px, rgb(0, 128, 87)0 8px 16px, rgb(0, 128, 87) 0 16px 32px;
+    transform: scale(1.2);
+}

@@ -51,8 +51,12 @@
     border-radius: 50px;
 }
 
-.progress-panel img {
+.bunny-image {
     padding: 100px 10px;
+}
+
+.win-image {
+    padding: 10px;
 }
 
 .progress-panel p {
@@ -78,7 +82,7 @@
     transform: scale(1.2);
 }
 
-.home-button {
+/* .home-button {
     width: 250px;
     background-color: #fbc2c2;
     border-radius: 100px;
@@ -96,4 +100,4 @@
 .home-button:hover {
     box-shadow: rgba(187, 44, 44, 0.35) 0 -25px 18px -14px inset, rgba(187, 44, 44, 0.25) 0 1px 2px, rgba(187, 44, 44, 0.25) 0 2px 4px, rgba(187, 44, 44, 0.25) 0 4px 8px, rgba(187, 44, 44, 0.25) 0 8px 16px, rgba(187, 44, 44, 0.25) 0 16px 32px;
     transform: scale(1.2);
-}
+} */
