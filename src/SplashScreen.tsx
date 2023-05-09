@@ -1,7 +1,7 @@
 import "./SplashScreen.css";
 import Lottie from "lottie-react";
 import purpleStars from "./purpleStars.json";
-import ParticlesBackground from "./ParticlesBackground";
+// import ParticlesBackground from "./ParticlesBackground";
 import animalGame from "./Images/animal_game.jpeg";
 import carrotGame from "./Images/carrot_game.jpeg";
 
