@@ -82,18 +82,15 @@ const GuessTheAnimal = ({ handleSplashScreenReturn }: { handleSplashScreenReturn
 
   const resetGuessedOnAllDisplayedLetters = () => {
     let newDisplayedLetters = [...displayedLetters];
-
     for (let key in newDisplayedLetters) {
       newDisplayedLetters[key].guessed = false;
     }
-
     setDisplayedLetters(newDisplayedLetters);
   };
 
   const handleClearGuess = () => {
     const newGuess = "";
     setCurrentGuess(newGuess);
-
     resetGuessedOnAllDisplayedLetters();
   };
 

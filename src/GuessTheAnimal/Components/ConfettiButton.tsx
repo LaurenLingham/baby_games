@@ -11,9 +11,7 @@ const ConfettiButton = ({ handleResetGame }: Props) => {
   
   const handleClick = () => {
     setDisplayMessage(true);
-    confetti({
-      particleCount: 500, spread: 100, origin: { y: 0.8 }
-    });
+    confetti({ particleCount: 500, spread: 100, origin: { y: 0.8 } });
     setTimeout(() => {
       setDisplayMessage(false);
       handleResetGame();

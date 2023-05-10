@@ -22,13 +22,13 @@ const SplashScreen = (
             <ParticlesBackground />
             <Lottie className="stars-animation" animationData={purpleStars} loop={true} />
             <div className="splash-buttons">
-                <div className="game-link animal-game" onClick={ onAnimalButtonClicked }>
-                    <img src={ animalGame } alt="" className="game-image" />
-                    <p>Guess The Animal</p>
-                </div>
                 <div className="game-link carrot-game" onClick={ onCarrotButtonClicked}>
                     <img src={ carrotGame } alt="" className="game-image" />
-                    <p>Collect The Carrots</p>
+                    <p>Collect the Carrots</p>
+                </div>
+                <div className="game-link animal-game" onClick={ onAnimalButtonClicked }>
+                    <img src={ animalGame } alt="" className="game-image" />
+                    <p>Guess the Animal</p>
                 </div>
             </div>
         </div>
