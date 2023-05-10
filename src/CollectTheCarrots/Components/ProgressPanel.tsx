@@ -14,7 +14,7 @@ const ProgressPanel = ({ collectedCarrots, handleSplashScreenReturn, handleReset
                 </div>
                 : <div>
                     <img src={ bunnyWithCarrot } className="win-image" alt="" width="350px" />
-                    <p>Congratulations! <br /> You found all of the carrots</p>
+                    <p>Well done! <br/> You found all of <br/> the carrots</p>
                     <button className="play-again-button" onClick={ handleResetGame }>Play again</button>
                 </div>
             }

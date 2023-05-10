@@ -1,6 +1,6 @@
 import { useState } from "react";
 import GuessTheAnimal from "./GuessTheAnimal/Container/GuessTheAnimal";
-import SplashScreen from "./SplashScreen";
+import SplashScreen from "./SplashScreen/SplashScreen";
 import CollectTheCarrots from "./CollectTheCarrots/Container/CollectTheCarrots";
 
 function App() {

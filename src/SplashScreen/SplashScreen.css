@@ -14,35 +14,18 @@
     gap: 10rem;
 }
 
-button {
-    width: 120px;
-    background-color: #a4ffc5;
-    border-radius: 100px;
-    color: green;
-    padding: 7px 20px;
-    text-decoration: none;
-    transition: all 250ms;
-    border: 0;
-    font-size: 30px;
-}
-
-button:hover {
-    box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
-    transform: scale(1.2);
-}
-
 .game-link {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #fa6c9e;
+    color: #c66bfe;
     font-family: 'Fuzzy Bubbles', cursive;
-    font-size: 2em;
-    border: solid #fa6c9e 5px;
+    font-size: 2.5em;
+    border: solid #c66bfe 5px;
     border-radius: 40px;
     padding: 20px;
-    background-color: #fde4ff;
+    background-color: #e5c9ff;
 }
 
 .game-link:hover {
