@@ -10,6 +10,7 @@ const ParticlesBackground = () => {
     }, []);
 
     return (
+        // @ts-ignore
         <Particles id="tsparticles" options={particleOptions} init={particlesInit} />
     );
 };
