@@ -27,6 +27,8 @@ My app is a set of games designed for young children.  The first is 'Collect the
 
 <img width="600" height="auto" alt="splashscreen" src="https://github.com/LaurenLingham/kid_games/blob/main/screenshots/guess_the_animal.png?raw=true">
 
+<img width="600" height="auto" alt="splashscreen" src="https://github.com/LaurenLingham/kid_games/blob/main/screenshots/guess_the_animal_win.png?raw=true">
+
 #### Technologies Used
 
 * React
