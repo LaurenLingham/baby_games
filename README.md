@@ -21,6 +21,12 @@ The game should be:
 
 My app is a set of games designed for young children.  The first is 'Collect the Carrots' where there is an image with several carrots hidden within it and the child is to collect them all.  The second is 'Guess the Animal' where an image of an aninmal is displayed and the child is to use the available letters provided to spell out the animal.  I implemented styling with particle effects, pop up messages and a confetti cannon.
 
+<img width="600" height="auto" alt="splashscreen" src="https://github.com/LaurenLingham/kid_games/blob/main/screenshots/splash_screen.png?raw=true">
+
+<img width="600" height="auto" alt="splashscreen" src="https://github.com/LaurenLingham/kid_games/blob/main/screenshots/collect_the_carrots.png?raw=true">
+
+<img width="600" height="auto" alt="splashscreen" src="https://github.com/LaurenLingham/kid_games/blob/main/screenshots/guess_the_animal.png?raw=true">
+
 #### Technologies Used
 
 * React
