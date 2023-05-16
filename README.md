@@ -47,7 +47,7 @@ vite preview
 You should see the following:
 
 ```bash
-  ➜  Local:   [http://localhost:4173/](http://localhost:4173/)
+  ➜  Local: http://localhost:4173/
   ➜  Network: use --host to expose
 ```
 
